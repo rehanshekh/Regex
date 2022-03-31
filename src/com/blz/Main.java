@@ -6,8 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
         int count=0;
-        Pattern p= Pattern.compile("[4][08]{5}$");
-        Matcher m = p.matcher("400008B");
+        Pattern p= Pattern.compile("[4][0]{2}\\s?[08]{3}$");
+        Matcher m = p.matcher("400 008");
         while(m.find()){
             count++;
             System.out.println(m.group());
